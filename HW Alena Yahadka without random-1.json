@@ -1,0 +1,112 @@
+
+		
+			new_data",
+		
+							 
+ проверка коэффициентов умножения salary
+							"pm.test('Salary_is_250', function () {\r",
+							"    let resp_data = pm.response.json();    //  response в json
+							"    let salary = request.data.salary;      // from salary(body),
+							"
+							"    pm.expect(resp_data.salary[1]).to.eql(salary * 2 + '');  
+							"    console.log(resp_data.salary[1] + '=' + salary * 2 + '');
+							"
+							"    pm.expect(resp_data.salary[2]).to.eql(salary * 3 + '');
+							"    console.log(resp_data.salary[2] + '=' + salary * 3 + '');
+							"});
+					
+			request FAIL
+Status code is 200 | AssertionError: expected response to have status code 200 but got 500
+FAIL
+Salary_is_250 | JSONError: Unexpected token '<' at 1:1 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"> ^
+		
+							проверить, что 2-й элемент массива salary больше 1-го и 0-го
+							
+							pm.test('Salary_is_below', function () {\r",
+							"    let resp_data = pm.response.json(); 
+							"    let salary = request.data.salary;
+
+							"    pm.expect(resp_data.salary [0]).to.be.below(salary * 2);
+							"    console.log (resp_data.salary [0] + ' < ' + salary * 2);,
+							"
+							"    pm.expect(resp_data.salary [0]).to.be.below(salary * 3);   
+							"    console.log (resp_data.salary [0] + ' < ' + salary * 3);
+							});
+							
+ЗАВАЛИЛСЯ тест							
+							
+							
+							
+							
+"test_pet_info",							
+							
+							
+		
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {,
+							"    pm.response.to.have.status(200);
+							"});
+проверка коэффициентов умножения weight
+							"    
+							
+							pm.test('Weight_is_58', function () {
+							"    let req_data  = request.data;       
+							"    let resp_data = pm.response.json(); 
+							"
+							"    let d_food = req_data.weight * 0.012;
+							"    let d_sleep = req_data.weight * 2.5;
+							"
+							"    console.log (d_food + ' ' + d_sleep);
+							"
+							"    pm.expect (resp_data.daily_food).to.eql(d_food); 
+							"    console.log (resp_data.daily_food + ' = ' + d_food);
+							"
+							"    pm.expect (resp_data.daily_sleep).to.eql(d_sleep);  
+							"    console.log (resp_data.daily_sleep + ' = ' + d_sleep);
+							"});
+оптимистичный ответ     
+							
+							<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or
+	there is an error in the application.</p>					
+							
+							
+							
+							
+					
+						
+"get_test_user",
+			
+							
+							1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {
+							"    pm.response.to.have.status(200);
+							"});
+							
+3) проверка значения поля name
+							"pm.test('Name_is_elena787', function () {
+							"    let req_data  = request.data;       
+							"    let resp_data = pm.response.json();
+							"
+							"    pm.expect(resp_data.name).to.eql(req_data.name);
+							"    console.log (resp_data.name + ' = ' + req_data.name);
+							"});
+							
+							
+							
+							"// 4) проверка значения поля age\r",
+							"pm.test('Age_is_25', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});"
+						],
+				ответ прям вообще обнадёживающий
+						There was an error in evaluating the test script:  ReferenceError: age_is_34 is not defined
+						
+					
+						
