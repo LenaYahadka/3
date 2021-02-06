@@ -1,0 +1,37 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.environment.set('random_number', cur_id);
+console.log(pm.variables.get('random_number'));
+c
+function multy() { 
+    let resp = pm.response.json(); 
+    console.log('ID count: '+ resp.length);
+for(let i=0; i<resp.length; i++){ 
+    pm.sendRequest({url: pm.environment.get(\"url\") + '/curr_byn',
+    method: 'POST',
+
+});
+											
+(function($) {
+    $.rand = function(arg) {
+        if ($.isArray(arg)) {
+            return arg[$.rand(arg.length)];
+        } else if (typeof arg === "number") {
+            return Math.floor(Math.random() * arg);
+        } else {
+            return 4;  // chosen by fair dice roll
+        }
+    };
+	
+	function rand(items) {
+    return items[~~(items.length * Math.random())];
+}
+	
+	function rand(min, max) {
+  var offset = min;
+  var range = (max - min) + 1;
+ 
+  var randomNumber = Math.floor( Math.random() * range) + offset;
+  return randomNumber;
+}
